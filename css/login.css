@@ -1,0 +1,73 @@
+body{
+
+    background:#5AB9EA;
+    height: auto;
+    min-height: 40rem;
+    letter-spacing: .0625em;
+    }
+    a{
+     text-decoration:none !important;
+     }
+     h1,h2,h3{
+     font-family: 'Varela Round';
+     }
+     .outer_border{
+        padding-top:4.2rem;
+        width:80%;
+        height: 40rem;
+        background-color: #84CEEB;
+        margin:auto;
+     }
+        .myform{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1rem;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #007bff;
+    border-radius: 1.1rem;
+    outline: 0;
+    max-width: 500px;
+     }
+     .tx-tfm{
+     text-transform:uppercase;
+     }
+    .btn{
+        box-shadow:0 .1875rem .1875rem 0 rgba(0,0,0,.1)!important;
+        padding:0.75rem 1rem;
+        border-color: #6c757d;
+        border-width: 0ch;
+        text-transform: uppercase;
+        letter-spacing: .14rem;
+    }
+    
+     
+     .span-or {
+     display: block;
+     position: absolute;
+     left: 50%;
+     top: -2px;
+     margin-left: -25px;
+     background-color: #fff;
+     width: 50px;
+     text-align: center;
+     }
+     .hr-or {
+     height: 1px;
+     margin-top: 0px !important;
+     margin-bottom: 0px !important;
+     }
+     
+      form .error {
+     color: #ff0000;
+     }
+     #second{display:none;}
+     .text-col{
+         color: #6c757d !important;
+     }
+     

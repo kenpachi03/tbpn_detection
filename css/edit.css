@@ -1,0 +1,46 @@
+ .my-col
+    {
+        
+        height: 400px;
+    }
+    form label {
+        background-color: #fff;
+      
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 0.1px ridge#6c757d;;
+        font-size: 0.8rem;
+        height: auto;
+        box-shadow:0 .1875rem .1875rem 0 rgba(0,0,0,.1)!important;
+        padding:0.75rem 1rem;
+        font-family:'Varela Round';
+        font-size:80%;
+        
+        text-transform:uppercase;
+        letter-spacing:.15rem;
+        border:0
+      }
+    form input{
+      display: none;
+    }
+    form label:hover {
+        color:#fff;
+        background-color:#6c757d;
+        border-color:#6c757d;
+    
+      }
+    form label:focus,form label.focus{
+        box-shadow: 0 0 0 0.2rem rgba(108, 117,125,0.5);
+    }
+    form label :disabled,form label.disabled{
+        color: #6c757d;
+        background-color: transparent;
+    }
+    form img{
+      height: 200px;
+      order: 1;
+    }
+    .pre{
+      height: 210px;
+      order: 1;
+    }
