@@ -87,7 +87,8 @@ formData.set("disease_name",dis);
 
 var request = new XMLHttpRequest();
 
-request.open('POST', "http://192.168.1.8:8000/imageAnalysis/post_verified_image");
+request.open('POST',"http://192.168.43.61:8000/imageAnalysis/post_verified_image");
+//request.open('POST', "http://192.168.1.8:8000/imageAnalysis/post_verified_image");
 request.send(formData);
 
 }

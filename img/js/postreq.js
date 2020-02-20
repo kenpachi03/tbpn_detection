@@ -28,6 +28,7 @@ function doSubmit(){
       normal.innerHTML=partxt["Normal"];
     }
 
-    request.open('POST', "http://192.168.1.8:8000/imageAnalysis/get_prediction_on_image");
+    request.open('POST',"http://192.168.43.61:8000/imageAnalysis/get_prediction_on_image");
+    //request.open('POST', "http://192.168.1.8:8000/imageAnalysis/get_prediction_on_image");
     request.send(formData);
      }

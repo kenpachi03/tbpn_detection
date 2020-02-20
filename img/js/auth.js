@@ -21,7 +21,8 @@ function auth(){
     }
     if(username.length>0 && password.length>0)
     {
-        request.open('POST', "http://192.168.1.8:8000/imageAnalysis/verified_login");
+        request.open('POST', "http://192.168.43.61:8000/imageAnalysis/verified_login");
+       // request.open('POST', "http://192.168.1.8:8000/imageAnalysis/verified_login");
         request.send(formData);
     }
     else
