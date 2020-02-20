@@ -1,8 +1,14 @@
- .my-col
+ /*.my-col
     {
         
         height: 400px;
-    }
+    }*/
+/*
+    .card{
+      width:40%;
+      margin-left:30%;
+    }*/
+  
     form label {
         background-color: #fff;
       
@@ -37,10 +43,109 @@
         background-color: transparent;
     }
     form img{
-      height: 200px;
-      order: 1;
+     /* height: 200px;
+      order: 1;*/
+      max-width: 70%;
+      height: auto;
     }
     .pre{
       height: 210px;
       order: 1;
     }
+    form ol{
+      list-style: none;
+      align-content: center;
+    }
+
+    @media (max-width: 576px){
+      form img{
+        height: 100px;
+        order: 1;
+      }
+      
+    }
+    @media(min-width: 786px){
+    
+    }
+
+    #dLabel {
+      background-color: #fff;
+      
+      padding: 5px 10px;
+      border-radius: 5px;
+      border: 0.1px ridge#6c757d;;
+      font-size: 0.8rem;
+      height: auto;
+      box-shadow:0 .1875rem .1875rem 0 rgba(0,0,0,.1)!important;
+      padding:0.75rem 1rem;
+      font-family:'Varela Round';
+      font-size:80%;
+      
+      text-transform:uppercase;
+      letter-spacing:.15rem;
+      border:0
+    
+   
+  }
+  #dLabel:hover{
+    color:#fff;
+    background-color:#6c757d;
+    border-color:#6c757d;
+  }
+   .caret {
+      float: right;
+      margin-top: 9px;
+      display: block;
+    }
+  
+  .dropdown-menu {
+
+    width: 240px;
+    padding: 0;
+    margin: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  
+  .dropdown button:hover, .dropdown button:focus {
+    border: none;
+    outline: 0;
+  }
+  
+  .dropdown.open button#dLabel {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+   
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.23);
+    border: solid 1px #666;
+     border-bottom: none;
+  }
+  
+  .dropdown.open ul {
+     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.23);
+    border: solid 1px #666;
+    border-top: none;
+    height: 200px;
+    overflow-y: scroll;
+  }
+  
+  .dropdown-menu li {
+   
+       line-height: 1.5;
+    letter-spacing: 0.7px;
+    color: #666;
+      font-size: 14px;
+    cursor: pointer;
+    padding: 7.5px 15px;
+    border-top: solid 1px #f3f3f3;
+    
+   
+   
+  }
+  
+  .dropdown-menu li:hover {
+           color:#fff;
+        background-color:#6c757d;
+        border-color:#6c757d;
+    
+  }

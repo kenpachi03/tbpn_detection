@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Tuberculosis and Pneumonia Detector">
     <meta name="author" content="">
   
@@ -20,8 +20,26 @@
   
     <!-- Custom styles for this template -->
     <link href="css/login.css" rel="stylesheet">
+
   
 </head>
+<nav class="navbar navbar-expand-lg " id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Tuberculosis and Pneumonia Detector</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link  js-scroll-trigger" href="../tbpneu/index.html">Home</a>
+			</li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 <body id="pagetop">
   <div class="outer_border">
     <div class="container con text-col">
@@ -34,18 +52,18 @@
                            <h3>Login</h3>
                         </div>
                 </div>
-                <form action="" method="post" id="login">
+                <form action=""  id="login">
                     <div class="form-group">
-                        <label for="exampleInputEmail1 text-col">Email address</label>
-                        <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+                        <label for="email text-col">Email address</label>
+                        <input type="email" name="email"  class="form-control" id="email" placeholder="Enter email" required>
                     </div> 
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Password</label>
-                        <input type="password" name="password" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="Enter Password" required       >
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password"  class="form-control"  placeholder="Enter Password" required       >
                      </div>
                      <div class="col-md-12 text-center ">
 
-                        <button type="submit" class=" btn  btn-outline-secondary btn-md btn-block " formaction="test.html">Login</button>
+                        <button onclick="auth()" class=" btn  btn-outline-secondary btn-md btn-block ">Login</button>
                      </div>   
                 </form>
             </div>
@@ -53,6 +71,7 @@
         </div>
     </div>
 </div>
+	</div>
     <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -60,6 +79,6 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/login.js"></script>
+  <script src="img/js/auth.js"></script>
 </body>
 </html>
