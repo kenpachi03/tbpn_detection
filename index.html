@@ -4,41 +4,38 @@
 <head>
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Tuberculosis and Pneumonia Detector">
   <meta name="author" content="">
 
   <title>Tuberculosis and Pneumonia Detector</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../tbpneu/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom fonts for this template -->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="../tbpneu/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/grayscale.min.css" rel="stylesheet">
-  <link href="css/edit.css" rel="stylesheet">
+  <link href="../tbpneu/css/grayscale.min.css" rel="stylesheet">
+  <link href="../tbpneu/css/edit.css" rel="stylesheet">
  
 </head>
 
 <body id="page-top">
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-black " id="mainNav">
-    <div class="container">
+  <nav class="navbar navbar-expand-lg  " id="mainNav">
+    <div class="container-fluid">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">Tuberculosis and Pneumonia Detector</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> Menu <em class="fas fa-bars"></em></button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="login.html">Login</a>
+            <a class="nav-link js-scroll-trigger" href="../tbpneu/login.html">Login</a>
           </li>
         
           <li class="nav-item">
@@ -53,77 +50,72 @@
   <div class="outer_border">
     <header class="masthead">
     <div class="container d-flex h-100 align-items-center">
-       <div class="container">
+       <div class="container-fluid">
           <div class="row mx-auto justify-content-center">
-            <div class="col-12">
+            <div class="col mw-100">
               <h4 class="text-white-50 mx-auto mt-0 mb-5 text-center">Upload your chest X-ray to check for Tuberculosis or Pneumonia</h4>
             </div>
           </div>
           <div class="row">
-              <div class="col-12">      
-                <div class="container-fluid">
-                  <div class="row justify-content-around my-row">
-                  
-                      <div class="col-6 my-col" >
-                        <div class="card text-secondary text-center border-primary" style="height:auto;">
-                          <div class="row">
-                            <div class="col-12">
-                        
-                              <h5 class="card-title  ">Choose a disease</h5>
-                          
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-12">
-                              <div class="dropdown show">
-                                <a class="btn btn-outline-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  Select
-                                </a>
+              <div class="col-md-6  mx-auto">                   
+                        <div class="card mb-4 text-secondary text-center border-primary" style="height:auto;">
+                              <h5 class="card-title  ">Choose a disease</h5>                          
+                    
+                                  <div class="dropdown">
+                                    <button id="dLabel" class=" dropdown-select mx-auto btn-outline-secondary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      Select
+                                      <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu option" aria-labelledby="dLabel">
+                                      <li onclick="settb()">Tuberculosis</li>
+                                      <li onclick="setpneu()">Pneumonia</li>
+                                     </ul>
+                                  </div>
                               
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                  <button class="dropdown-item " >Tuberculosis</button>
-                                  <div class="dropdown-divider"></div>
-                                  <button class="dropdown-item ">Pneumonia</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                         <div class="row">
-                           <div class="col-12">
+                         
                              <div class="card-body">
                                <form>
                                   <label  for="image_uploads">Browse</label>
                                   <input type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" >
-								                  <div class="preview ">
+								                  <div class="preview align-content-center">
                                     <div class="container pre"></div>
                                   </div>
-                                </form>
-                              </div>
-                            </div>
-                        </div>
-						
-                      <div class="card-body align-self-center">
+                           
+
                           <p>Results</p>
-                          <br><br>
-                          <a href="#about" class="btn  btn-outline-secondary btn-sm js-scroll-trigger">Check</a>
+                          <!--p id="results"></p-->
+                          <div class="container mx-auto">
+                            <table >
+                              <tr>
+                                <td>Positive:</td>
+                                <td id="results"></td>
+                              </tr>
+                              <tr>
+                                <td>Normal:</td>
+                                <td id="res_nor"></td>
+                              </tr>
+                            </table>
+                          </div>
+                          <a href="#about" onclick="doSubmit()" class="btn  btn-outline-secondary btn-sm js-scroll-trigger">Analyze</a>                    
+                               </form>
+                         </div>
                         </div>
-                        </div>
-					  </div>
+					    </div>
 
                   
                      
                   
-              </div>         
-          </div> 
-          </div>       
+              
         
          </div>    
     </div>
-  </div>
+		</div>
+	
 
   </header>
-
+		
   <!-- Contact Section -->
+
   <section class="contact-section bg-black" id="contact">
     <div class="container">
 
@@ -157,6 +149,7 @@
      
     </div>
   </section>
+	  </div>
 
   <!-- Footer -->
   <footer class="bg-black small text-center text-white-50">
@@ -166,15 +159,16 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../tbpneu/vendor/jquery/jquery.min.js"></script>
+  <script src="../tbpneu/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="../tbpneu/vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/grayscale.min.js"></script>
-  <script src="image.js"></script>
+  <script src="../tbpneu/js/grayscale.min.js"></script>
+  <script src="../tbpneu/image.js"></script>
+  <script src="../tbpneu/img/js/postreq.js"></script>
 </body>
 
 </html>
